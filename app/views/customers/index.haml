@@ -1,0 +1,18 @@
+/ %button.btn.btn-default.btn-lg
+/ 	%span.glyphicon.glyphicon-star Star
+
+#customers-table.table-responsive
+	%table.table.table-hover.table-striped
+		%thead
+			%tr
+				%th ID
+				%th Imię
+				%th Nazwisko
+				%th Typ ubezpieczenia
+		%tbody
+			- 10.times do
+				%tr{ :data => { :href => '/1' } }
+					%td cell
+					%td cell
+					%td cell
+					%td cell

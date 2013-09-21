@@ -1,0 +1,18 @@
+!!!
+%html
+	%head
+		%title TEST
+		%meta{ :content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
+		= stylesheet_link_tag 'application'
+	%body
+		.container
+			= partial 'layouts/header'
+
+			= partial 'layouts/navbar'
+
+			#wrapper
+				.row
+					= yield
+
+		%script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" }
+		= javascript_include_tag 'bootstrap.min'
