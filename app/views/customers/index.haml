@@ -1,5 +1,16 @@
-/ %button.btn.btn-default.btn-lg
-/ 	%span.glyphicon.glyphicon-star Star
+.search-box
+	%h4 Wyszukaj klienta
+	%form{ :action => '/' }
+		%ul.fields-list
+			%li
+				%label
+					%input{ :type => 'text', :class => 'form-control search-field', :placeholder => 'imię / nazwisko' }
+			%li
+				%label
+					%input{ :type => 'text', :class => 'form-control search-field', :placeholder => 'data ubezpieczenia od' }
+			%li
+				%label
+					%input{ :type => 'text', :class => 'form-control search-field', :placeholder => 'data ubezpieczenia do' }
 
 #customers-table.table-responsive
 	%table.table.table-hover.table-striped
@@ -10,9 +21,9 @@
 				%th Nazwisko
 				%th Typ ubezpieczenia
 		%tbody
-			- 10.times do
-				%tr{ :data => { :href => '/1' } }
-					%td cell
-					%td cell
-					%td cell
-					%td cell
+			- @customers.each do |customer|
+				%tr{ :data => { :url => url_for(:customers, :edit, :id => customer.id) } }
+					%td= customer.id
+					%td= customer.imie
+					%td= customer.nazwisko
+					%td= customer.rodzaj_ubezp

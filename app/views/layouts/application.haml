@@ -6,13 +6,17 @@
 		= stylesheet_link_tag 'application'
 	%body
 		.container
-			= partial 'layouts/header'
-
 			= partial 'layouts/navbar'
+			= partial 'layouts/header'
 
 			#wrapper
 				.row
-					= yield
+					.bg-layer
+						= [:success, :info, :warning, :danger].map { |type| flash_tag(type, :class => "alert alert-#{type} fade in", :bootstrap => true) }.join.html_safe
+						= yield
 
-		%script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" }
+		/ %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" }
+		= javascript_include_tag 'jquery'
 		= javascript_include_tag 'bootstrap.min'
+		= javascript_include_tag 'application'
+		= yield_content :js

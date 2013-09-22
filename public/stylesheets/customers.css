@@ -1,7 +1,35 @@
-#customers-table {
-  margin-top: 20px;
-  background: #fff;
-  padding: 15px 0;
-  box-shadow: 0 -1px 2px #ddd;
-  border-radius: 6px;
-  border: 1px solid #ccc; }
+#customer-details .field-name,
+#account-details .field-name {
+  width: 15%; }
+#customer-details tr th:first-child,
+#customer-details tr td:first-child,
+#account-details tr th:first-child,
+#account-details tr td:first-child {
+  border-right: 1px solid #ddd;
+  text-align: right; }
+#customer-details .section-header,
+#account-details .section-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd; }
+  #customer-details .section-header .section-title,
+  #account-details .section-header .section-title {
+    padding-left: 10px; }
+#customer-details .section-content,
+#account-details .section-content {
+  margin-bottom: 25px; }
+#customer-details .section-inside,
+#account-details .section-inside {
+  background-image: linear-gradient(#ffffff, #f8f8f8);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 10px 10px;
+  margin: 10px; }
+  #customer-details .section-inside .title-inside,
+  #account-details .section-inside .title-inside {
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    line-height: 2em;
+    font-size: 1.2em; }
+#customer-details #save-customer,
+#account-details #save-customer {
+  margin-left: 10px; }

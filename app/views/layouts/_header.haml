@@ -1,28 +1,11 @@
 %header#header.row
-	.search-box.col-md-4
-		%form{ :action => '/', :method => "POST" }
-			.input-group
-				%input.form-control.search-field{ :type => "text", :placeholder => 'Szukaj klientów' }
-				.input-group-btn.btn-group
-					%button.btn.btn-default.dropdown-toggle.custom-btn{ :type => "button", :data => { :toggle => "dropdown" } }
-						%span.caret
-					%ul.dropdown-menu{ :role => "menu" }
-						%li
-							%a{ :href => "#" } 
-								%span.glyphicon.glyphicon-ok.hide
-								Imię / nazwisko 
-						%li
-							%a{ :href => "#" } 
-								%span.glyphicon.glyphicon-ok.hide
-								Data wygaśnięcia
-
 	.user-box.col-md-3.pull-right
 		.btn-group.pull-right
-			%button.btn.btn-default.custom-btn{ :type => "button" } Dominika Jaworska
-			%button.btn.btn-default.dropdown-toggle.custom-btn{ :type => "button", :data => { :toggle => "dropdown" } }
+			%a.btn.btn-default{ :href => url_for(:profile, :show) }
+				= "#{current_account.name} "
+				= "#{current_account.surname}"
+			%button.btn.btn-default.dropdown-toggle{ :type => "button", :data => { :toggle => "dropdown" } }
 				%span.caret
 			%ul.dropdown-menu{ :role => "menu" }
 				%li
-					%a{ :href => "#" } Action
-				%li
-					%a{ :href => "#" } Another action
+					%a{ :href => url_for(:authorization, :destroy) } Wyloguj się

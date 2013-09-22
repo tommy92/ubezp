@@ -1,5 +1,5 @@
-%form.form-signin
+- form_tag url(:authorization, :create), :class => 'form-signin' do
 	%h2.form-signin-heading Autoryzacja do systemu
-	%input.form-control.login{ :type => "text", :placeholder => "Email lub nazwa użytkownika", :autofocus => true }
-	%input.form-control.password{ :type => "password", :placeholder => "Hasło" }
-	%button.btn.btn-lg.btn-primary.btn-block{ :type => "submit" } Zaloguj się
+	= email_field_tag :email, :value => params[:email], :autofocus => true, :placeholder => "Email lub nazwa użytkownika", :class => 'form-control login'
+	= password_field_tag :password, :value => params[:password], :placeholder => "Hasło", :class => 'form-control password'
+	= submit_tag :class => 'btn btn-lg btn-primary btn-block', :value => 'Zaloguj się'

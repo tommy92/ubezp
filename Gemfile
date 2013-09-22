@@ -16,11 +16,13 @@ gem 'rake'
 gem 'omniauth'
 
 # Component requirements
+gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'sass'
 gem "compass", "~> 0.12.2"
 gem 'haml'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
-gem 'sqlite3'
+gem 'mysql2'
+gem "will_paginate", "~> 3.0.5"
 
 # Test requirements
 

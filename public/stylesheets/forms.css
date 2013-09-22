@@ -1,0 +1,30 @@
+.fields-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 10px; }
+  .fields-list li {
+    display: inline-block;
+    width: 24%;
+    margin-bottom: 10px; }
+    .fields-list li label {
+      cursor: pointer;
+      display: inline-table;
+      width: 100%; }
+    .fields-list li input {
+      display: block;
+      width: 80%;
+      margin-top: 4px; }
+    .fields-list li .input-group {
+      width: 80%;
+      clear: both;
+      margin-top: 4px; }
+      .fields-list li .input-group .form-control {
+        width: 100%;
+        margin-top: 0; }
+
+.invalid {
+  border-color: red; }
+
+.error {
+  color: red;
+  font-size: 12px; }

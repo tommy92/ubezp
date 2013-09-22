@@ -1,39 +1,23 @@
 body {
   background-color: #f1f1f1; }
 
-#header {
-  border-width: 0 1px 1px 1px;
-  border-color: #ccc;
-  border-style: solid;
-  background-color: #fff;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  height: 40px;
-  box-shadow: 0 1px 2px #ddd; }
-  #header .custom-btn {
-    border-top: 0;
-    border-bottom: 0;
-    border-radius: 0;
-    padding: 9px 15px 10px; }
-  #header .search-box {
-    padding: 0; }
-    #header .search-box .search-field {
-      border: 0;
-      height: 39px; }
-    #header .search-box .dropdown-menu .active {
-      padding-left: 3px; }
-  #header .user-box {
-    padding-right: 0; }
-    #header .user-box .custom-btn {
-      border-right-width: 0;
-      border-bottom-right-radius: 6px; }
-      #header .user-box .custom-btn:nth-child(1) {
-        border-bottom-right-radius: 0;
-        border-right-width: 1px; }
-    #header .user-box .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
-      border-top-left-radius: 0; }
-    #header .user-box .btn-group > .btn:last-child:not(:first-child), #header .user-box .btn-group > .dropdown-toggle:not(:first-child) {
-      border-top-right-radius: 0; }
-
 #wrapper {
+  margin-bottom: 30px;
   clear: both; }
+
+.bg-layer {
+  margin-top: 20px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 -1px 2px #ddd;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  overflow: hidden; }
+
+.search-box {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 10px; }
+
+tr[data-url] {
+  cursor: pointer; }
