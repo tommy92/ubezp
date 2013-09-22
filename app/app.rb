@@ -7,11 +7,27 @@ module Ubezp
     register Padrino::Helpers
     register Padrino::Admin::AccessControl
 
-    enable :sessions
-
     get '/' do
-        redirect url(:authorization, :index)
+        redirect url_for(:customers, :index)
     end
+
+    set :login_page,  '/authorization'
+    enable  :sessions
+    disable :store_location
+
+    access_control.roles_for :any do |role|
+      role.protect '/'
+      role.allow   '/authorization'
+    end
+
+    access_control.roles_for :admin do |role|
+        role.project_module :customers, '/customers'
+    end
+
+    # Custom error management
+    error(403) { @title = "Error 403"; render('errors/403', :layout => :error) }
+    error(404) { @title = "Error 404"; render('errors/404', :layout => :error) }
+    error(500) { @title = "Error 500"; render('errors/500', :layout => :error) }
 
     ##
     # Caching support

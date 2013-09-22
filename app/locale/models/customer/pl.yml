@@ -1,0 +1,33 @@
+pl:
+	activerecord:
+    errors:
+      messages:
+        blank: "can not has nottin"
+	models:
+		customer:
+			name: Customer
+			attributes:
+				id: Id
+				imie: Imie
+				nazwisko: Nazwisko
+				ulica: Ulica
+				numer_domu: Numer domu
+				miasto: Miasto
+				skladka_raty: Skladka raty
+				okres_od: Okres od
+				okres_do: Okres do
+				rodzaj_ubezp: Rodzaj ubezp
+				nr_tel: Nr tel
+				nazwa_firmy: Nazwa firmy
+				skladka_cala: Skladka cala
+				skladla_ilosc: Skladla ilosc
+				rata_1: Rata 1
+				rata_2: Rata 2
+				rata_2_data: Rata 2 data
+				rata_3: Rata 3
+				rata_3_data: Rata 3 data
+				rata_4: Rata 4
+				rata_4_data: Rata 4 data
+				ilosc_rat: Ilosc rat
+				nr_polisy: Nr polisy
+				kod_pocztowy: Kod pocztowy

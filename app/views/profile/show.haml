@@ -1,0 +1,18 @@
+#account-details
+	.section-header
+		%h4.section-title Edycja profilu
+	.section-content
+		- form_for @account, url_for(:profile, :update, :id => @account[:id]) do |f|
+			%ul.fields-list
+				%li
+					%label
+						Imię
+						= f.text_field(:name, :class => 'form-control')
+				%li
+					%label
+						Nazwisko
+						= f.text_field(:surname, :class => 'form-control')
+				%li
+					%label
+						Email
+						= f.text_field(:email, :class => 'form-control')

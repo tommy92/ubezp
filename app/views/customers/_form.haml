@@ -1,0 +1,114 @@
+.section-header
+	%h4.section-title Dane podstawowe
+.section-content
+	/ = f.hidden_field(:id)
+	%ul.fields-list
+		%li
+			%label
+				Imię
+				= f.text_field(:imie, :class => 'form-control')
+				= f.error_message_on :imie
+		%li
+			%label
+				Nazwisko
+				= f.text_field(:nazwisko, :class => 'form-control')
+				= f.error_message_on :nazwisko
+		%li
+			%label
+				Ulica
+				= f.text_field(:ulica, :class => 'form-control')
+				= f.error_message_on :ulica
+		%li
+			%label
+				Numer domu
+				= f.text_field(:numer_domu, :class => 'form-control')
+				= f.error_message_on :numer_domu
+		%li
+			%label
+				Miasto
+				= f.text_field(:miasto, :class => 'form-control')
+				= f.error_message_on :miasto
+		%li
+			%label
+				Kod pocztowy
+				= f.text_field(:kod_pocztowy, :class => 'form-control')
+		%li
+			%label
+				Numer telefonu
+				= f.text_field(:nr_tel, :class => 'form-control')
+
+.section-header
+	%h4.section-title Dane ubezpieczeniowe
+.section-content
+	%ul.fields-list
+		%li
+			%label
+				Rodzaj ubezpieczenia
+				= f.text_field(:rodzaj_ubezp, :class => 'form-control')
+				= f.error_message_on :rodzaj_ubezp
+		%li
+			%label
+				Nazwa firmy
+				= f.text_field(:nazwa_firmy, :class => 'form-control')
+				= f.error_message_on :nazwa_firmy
+		%li
+			%label
+				Cała składka
+				.input-group
+					= f.text_field(:skladka_cala, :class => 'form-control')
+					%span.input-group-addon zł
+				= f.error_message_on :skladka_cala
+		%li
+			%label
+				Numer polisy
+				= f.text_field(:nr_polisy, :class => 'form-control')
+	%ul.fields-list
+		%li
+			%label
+				Okres od
+				= f.text_field(:okres_od, :class => 'form-control')
+		%li
+			%label
+				Okres do
+				= f.text_field(:okres_do, :class => 'form-control')
+	.section-inside
+		%h5.title-inside Raty
+		%ul.fields-list
+			%li
+				%label
+					Rata 1
+					.input-group
+						= f.text_field(:rata_1, :class => 'form-control')
+						%span.input-group-addon zł
+			%li
+				%label
+					Rata 2
+					.input-group
+						= f.text_field(:rata_2, :class => 'form-control')
+						%span.input-group-addon zł
+			%li
+				%label
+					Rata 3
+					.input-group
+						= f.text_field(:rata_3, :class => 'form-control')
+						%span.input-group-addon zł
+			%li
+				%label
+					Rata 4
+					.input-group
+						= f.text_field(:rata_4, :class => 'form-control')
+						%span.input-group-addon zł
+		%ul.fields-list
+			%li
+			%li
+				%label
+					= f.text_field(:rata_2_data, :placeholder => 'rrrr-mm-dd', :class => 'form-control')
+			%li
+				%label
+					= f.text_field(:rata_3_data, :placeholder => 'rrrr-mm-dd', :class => 'form-control')
+			%li
+				%label
+					= f.text_field(:rata_4_data, :placeholder => 'rrrr-mm-dd', :class => 'form-control')
+
+= f.submit "Zapisz", :class => 'btn btn-primary pull-right', :id => 'save-customer'
+%a.btn.btn-danger.pull-right{ :href => url_for(:customers, :index) } anuluj

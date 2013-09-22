@@ -1,0 +1,6 @@
+- content_for :js do
+	= javascript_include_tag 'ajax_insurance_type'
+
+#customer-details
+	- form_for :customer, url_for(:customers, :update, :id => @customer.id) do |f|
+		= partial 'customers/form', :locals => {:f => f}

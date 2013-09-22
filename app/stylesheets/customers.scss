@@ -1,8 +1,40 @@
-#customers-table {
-	margin-top: 20px;
-	background: #fff;
-	padding: 15px 0;
-	box-shadow: 0 -1px 2px #ddd;
-	border-radius: 6px;
-	border: 1px solid #ccc;
+#customer-details,
+#account-details {
+	.field-name { width: 15%; }
+
+	tr {
+		th:first-child,
+		td:first-child {
+			border-right: 1px solid #ddd;
+			text-align: right;
+		}
+	}
+
+	.section-header {
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ddd;
+
+		.section-title { padding-left: 10px; }
+	}
+
+	.section-content { margin-bottom: 25px; }
+
+	.section-inside {
+		// @include border-radius(4px);
+		// @include linear gradient..
+		background-image: linear-gradient(#fff, #f8f8f8);
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		padding: 0 10px 10px;
+		margin: 10px;
+
+		.title-inside {
+			border-bottom: 1px solid #ccc;
+			padding-left: 10px;
+			line-height: 2em;
+			font-size: 1.2em;
+		}
+	}
+
+	#save-customer { margin-left: 10px; }
 }
